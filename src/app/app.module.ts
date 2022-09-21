@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +18,9 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { PeopleComponent } from './people/people.component';
 import { RegisterComponent } from './register/register.component';
 import { TvComponent } from './tv/tv.component';
+import { MoviedetailsComponent } from './moviedetails/moviedetails.component';
+import { SeemorePipe } from './seemore.pipe';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,11 @@ import { TvComponent } from './tv/tv.component';
     NotfoundComponent,
     PeopleComponent,
     RegisterComponent,
-    TvComponent
+    TvComponent,
+    MoviedetailsComponent,
+    SeemorePipe,
+    SearchPipe,
+
   ],
   imports: [
     BrowserModule,
@@ -36,7 +45,11 @@ import { TvComponent } from './tv/tv.component';
     BrowserAnimationsModule,
     RouterModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    NgxNavbarModule,
+    CarouselModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
