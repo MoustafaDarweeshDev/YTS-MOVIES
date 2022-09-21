@@ -1,0 +1,15 @@
+<div class="row p-5">
+  <div class="col-md-4 mr-3">
+    <img [src]="imagePrefix+movie?.poster_path" alt="">
+  </div>
+
+  <div class="col-md-8 px-5">
+    <h2>{{ movie.title }}</h2>
+    <p>{{ movie.overview }}</p>
+    <ul>
+      <li>Popularity : {{movie.popularity}}</li>
+      <li>Popularity : {{movie.vote_average}}</li>
+      <li>Popularity : {{movie.vote_count}}</li>
+    </ul>
+  </div>
+</div>

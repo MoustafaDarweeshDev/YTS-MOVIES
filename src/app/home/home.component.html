@@ -1,1 +1,80 @@
-<p>home works!</p>
+<div class="container-fluid">
+
+  <header class="vh-100 row align-items-end mb-5">
+    <owl-carousel-o [options]="customOptions">
+
+      <ng-container *ngFor="let movie of trendingMovies">
+        <ng-template carouselSlide [id]="movie.id">
+          <img [src]="imgPrefix+movie.poster_path" alt="">
+        </ng-template>
+      </ng-container>
+
+    </owl-carousel-o>
+  </header>
+
+
+<div class="row">
+  <div class="col-md-4 d-flex justify-content-center align-items-center">
+    <div class="w-75">
+      <div class="brdr w-50 mb-5"></div>
+      <h2>Top Rated <br>Movies<br> To Watch Right Now</h2>
+      <p class="text-muted">most watched movies by day</p>
+
+    <div class="brdr mt-5"></div>
+    </div>
+  </div>
+  <div *ngFor="let movie of trendingMovies" class="col-md-2">
+    <a [routerLink]="['/moviedetails' , movie.id]" class="movie">
+      <img [src]="imgPrefix+movie.poster_path" alt="">
+      <h3 class="h5 pt-1">{{movie.title}}</h3>
+      <p class="text-muted">{{ movie.overview | seemore }}</p>
+    </a>
+  </div>
+</div>
+ <div class="brdr w-75 my-5 m-auto"></div>
+<div class="row">
+  <div class="col-md-4 d-flex justify-content-center align-items-center">
+
+    <div class="w-75">
+      <div class="brdr w-50 mb-5"></div>
+
+      <h2>Top Rated <br>TV Shows<br> To Watch Right Now</h2>
+      <p class="text-muted">most watched movies by day</p>
+
+    <div class="brdr mt-5"></div>
+    </div>
+
+  </div>
+  <div *ngFor="let tv of trendingTv" class="col-md-2">
+    <a [routerLink]="['/moviedetails' , tv.id]" class="movie">
+      <img [src]="imgPrefix+tv.poster_path" alt="">
+      <h3 class="h5 pt-1">{{tv.title}}</h3>
+      <p class="text-muted">{{ tv.overview | seemore }}</p>
+    </a>
+  </div>
+</div>
+<div class="brdr w-75 my-5 m-auto"></div>
+
+<div class="row">
+  <div class="col-md-4 d-flex justify-content-center align-items-center">
+
+    <div class="w-75">
+      <div class="brdr w-50 mb-5"></div>
+
+      <h2>Top Rated <br>Movies<br> To Watch Right Now</h2>
+      <p class="text-muted">most watched movies by day</p>
+
+    <div class="brdr mt-5"></div>
+    </div>
+
+  </div>
+  <div *ngFor="let person of trendingPeople" class="col-md-2">
+    <div class="movie">
+
+      <img [src]="imgPrefix+person.profile_path" alt="">
+      <h3 class="h5 pt-1">{{person.name}}</h3>
+    </div>
+  </div>
+</div>
+
+</div>
