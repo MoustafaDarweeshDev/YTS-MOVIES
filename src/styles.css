@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  background-color: #1D1D1D;
+  color: white;
+}
+p{
+  margin: 0;
+}
+.cart:hover h3{
+  color: green;
+}
+
+.movie img{
+  width: 16vw;
+}
+.movie {
+  color: black;
+  text-decoration: none
+}
+.movie hover{
+  color: black;
+}
+.movie img{
+  height: 50vh;
+  /* width: 16vw; */
+}
+.movie {
+  color: black;
+  text-decoration: none
+}
+.movie hover{
+  color: black;
+}
+.pointer{
+  cursor: pointer !important;;
+}
+.pointer a{
+  color: black;
+}

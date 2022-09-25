@@ -17,7 +17,7 @@ export class MoviesComponent implements OnInit {
 
   ngOnInit(): void {
     this.pages=new Array(this.pagesNumber).fill('').map((x,i)=>i+1)
-    this.moviesService.getMoviesByPagination(1).subscribe({
+    this.moviesService.getMoviesByPagination(1,'movie').subscribe({
       next:(res)=>{
         this.trendingMovies = res.results
       }
@@ -26,7 +26,7 @@ export class MoviesComponent implements OnInit {
   }
 
   clickedPage(pagenum:number){
-    this.moviesService.getMoviesByPagination(pagenum).subscribe({
+    this.moviesService.getMoviesByPagination(pagenum,'movie').subscribe({
       next:(res)=>{
         this.trendingMovies = res.results
       }

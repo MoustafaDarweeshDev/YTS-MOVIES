@@ -47,7 +47,7 @@
 
 <div>
   <label for="password">password</label>
-  <input type="text" formControlName="password" class="form-control mb-2">
+  <input type="password" formControlName="password" class="form-control mb-2">
   <div *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched">
     <p *ngIf="registerForm.get('password')?.getError('required')" class="alert alert-danger py-1">this field is required</p>
     <p *ngIf="registerForm.get('password')?.getError('pattern')" class="alert alert-danger py-1">3 to 8 charchters</p>

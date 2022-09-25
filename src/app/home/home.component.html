@@ -1,6 +1,6 @@
 <div class="container-fluid">
-
   <header class="vh-100 row align-items-end mb-5">
+    <h2 class="d-block d-sm-none text-center">YTS MOVIES </h2>
     <owl-carousel-o [options]="customOptions">
 
       <ng-container *ngFor="let movie of trendingMovies">
@@ -14,28 +14,30 @@
 
 
 <div class="row">
-  <div class="col-md-4 d-flex justify-content-center align-items-center">
-    <div class="w-75">
+  <div class="col-md-4 d-flex justify-content-center align-items-center p-3">
+    <div class="w-75 pb-5">
       <div class="brdr w-50 mb-5"></div>
       <h2>Top Rated <br>Movies<br> To Watch Right Now</h2>
       <p class="text-muted">most watched movies by day</p>
 
-    <div class="brdr mt-5"></div>
+    <div class="brdr mt-5 sm-none"></div>
     </div>
   </div>
-  <div *ngFor="let movie of trendingMovies" class="col-md-2">
+  <div *ngFor="let movie of trendingMovies" class="col-sm-12 col-md-2 cart text-center">
     <a [routerLink]="['/moviedetails' , movie.id]" class="movie">
-      <img [src]="imgPrefix+movie.poster_path" alt="">
+      <div class="imag text-center w-100">
+        <img [src]="imgPrefix+movie.poster_path" alt="" >
+      </div>
       <h3 class="h5 pt-1">{{movie.title}}</h3>
       <p class="text-muted">{{ movie.overview | seemore }}</p>
     </a>
   </div>
 </div>
- <div class="brdr w-75 my-5 m-auto"></div>
+ <div class="brdr w-75 my-5 m-auto d-none d-md-block"></div>
 <div class="row">
   <div class="col-md-4 d-flex justify-content-center align-items-center">
 
-    <div class="w-75">
+    <div class="w-75 pb-5">
       <div class="brdr w-50 mb-5"></div>
 
       <h2>Top Rated <br>TV Shows<br> To Watch Right Now</h2>
@@ -45,20 +47,22 @@
     </div>
 
   </div>
-  <div *ngFor="let tv of trendingTv" class="col-md-2">
+  <div *ngFor="let tv of trendingTv" class="col-md-2  cart">
     <a [routerLink]="['/moviedetails' , tv.id]" class="movie">
+      <div class="imag text-center w-100">
       <img [src]="imgPrefix+tv.poster_path" alt="">
-      <h3 class="h5 pt-1">{{tv.title}}</h3>
+      </div>
+      <h3 class="h5">{{tv.name}}</h3>
       <p class="text-muted">{{ tv.overview | seemore }}</p>
     </a>
   </div>
 </div>
-<div class="brdr w-75 my-5 m-auto"></div>
+<div class="brdr w-75 my-5 m-auto d-none d-md-block"></div>
 
 <div class="row">
   <div class="col-md-4 d-flex justify-content-center align-items-center">
 
-    <div class="w-75">
+    <div class="w-75 pb-5">
       <div class="brdr w-50 mb-5"></div>
 
       <h2>Top Rated <br>Movies<br> To Watch Right Now</h2>
@@ -68,10 +72,11 @@
     </div>
 
   </div>
-  <div *ngFor="let person of trendingPeople" class="col-md-2">
+  <div *ngFor="let person of trendingPeople" class="col-md-2  cart">
     <div class="movie">
-
+      <div class="imag text-center w-100">
       <img [src]="imgPrefix+person.profile_path" alt="">
+      </div>
       <h3 class="h5 pt-1">{{person.name}}</h3>
     </div>
   </div>

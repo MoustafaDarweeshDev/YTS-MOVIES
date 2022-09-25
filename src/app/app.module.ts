@@ -7,6 +7,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';

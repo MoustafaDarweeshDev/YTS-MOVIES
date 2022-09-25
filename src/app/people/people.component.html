@@ -1,1 +1,24 @@
-<p>people works!</p>
+<div class="row p-4 d-flex justify-content-center">
+  <div class="py-5 d-flex justify-content-center">
+    <nav aria-label="...">
+      <ul class="pagination pagination-lg">
+        <input type="text"  placeholder="search by name.." class="form-control" [(ngModel)]="term">
+        <li *ngFor="let page of pages" (click)="clickedPage(page)" class="pointer page-item">
+          <a class="page-link" >{{page}}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div *ngFor="let person of trendingPeople | search:term:'name'" class="col-md-2">
+    <a [routerLink]="['/moviedetails' , person.id]" class="movie cart">
+      <img [src]="imgPrefix+person.profile_path" alt="">
+    <h3 class="h5 pt-1">{{person.name}}</h3>
+    <!-- <p class="text-muted">{{ person.overview | seemore }}</p> -->
+    </a>
+  </div>
+</div>
+
+
+
+

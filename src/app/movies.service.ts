@@ -18,8 +18,12 @@ export class MoviesService {
   {
     return this.client.get(`https://api.themoviedb.org/3/movie/${id}?api_key=b593537922c5c1c79afa67446ad3eb3b&language=en-US`)
   }
-  getMoviesByPagination(page:any):Observable<any>
+  getMoviesByPagination(page:any , mediatype:string):Observable<any>
   {
-    return this.client.get(`https://api.themoviedb.org/3/discover/movie?api_key=b593537922c5c1c79afa67446ad3eb3b&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`)
+    return this.client.get(`https://api.themoviedb.org/3/discover/${mediatype}?api_key=b593537922c5c1c79afa67446ad3eb3b&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`)
+  }
+  getPersonByPagination(page:any):Observable<any>
+  {
+    return this.client.get(`https://api.themoviedb.org/3/person/popular?api_key=b593537922c5c1c79afa67446ad3eb3b&language=en-US&page=${page}`)
   }
 }

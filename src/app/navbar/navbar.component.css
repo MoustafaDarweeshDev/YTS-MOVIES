@@ -1,0 +1,59 @@
+*{
+  color: white;
+
+}
+.navbar{
+  background-color: #1D1D1D !important;
+}
+*:hover{
+  color: rgba(48, 223, 48, 0.8);
+}
+.nav-link:active{
+  color: rgba(255, 255, 255, 0.5)!important;
+
+}
+.dropdown-item:hover{
+  background-color: #6AC143;
+  color: white;
+  margin: 0 !important;
+}
+.logo{
+  color: red !important;
+}
+.logo img{
+  width: 100px;
+}
+.nav-link:active{
+  color: red !important;
+  background-color: pink !important;
+}
+.u-left{
+  margin-right: auto;
+}
+.u-right{
+  margin-left: auto;
+}
+
+.dropdown-menu {
+  background-color:#1D1D1D ;
+  border: 0.1px solid #ffff;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  /* border: none!important; */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(106, 193, 07)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  background-color: #1D1D1D!important;
+  /* border: none!important; */
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus .custom-toggler.navbar-toggler{
+    outline: none;
+    box-shadow: none;
+    background-image: url('../../assets/Images/icons8-close.svg');
+    background-size: cover;
+    /* background-image: none; */
+}

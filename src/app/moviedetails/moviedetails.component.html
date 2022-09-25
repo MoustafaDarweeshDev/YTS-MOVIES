@@ -1,15 +1,18 @@
-<div class="row p-5">
-  <div class="col-md-4 mr-3">
-    <img [src]="imagePrefix+movie?.poster_path" alt="">
+<div class="container">
+  <div class="row py-5">
+    <div class="col-md-5 mr-3 text-center">
+      <img [src]="imagePrefix+movie?.poster_path" alt="">
+    </div>
+
+    <div class="info col-md-7 px-3">
+      <h2>{{ movie?.title }}</h2>
+      <p>{{ movie.overview }}</p>
+      <ul class="py-3">
+        <li>Popularity : {{movie.popularity}}</li>
+        <li>Popularity : {{movie.vote_average}}</li>
+        <li>Popularity : {{movie.vote_count}}</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="col-md-8 px-5">
-    <h2>{{ movie.title }}</h2>
-    <p>{{ movie.overview }}</p>
-    <ul>
-      <li>Popularity : {{movie.popularity}}</li>
-      <li>Popularity : {{movie.vote_average}}</li>
-      <li>Popularity : {{movie.vote_count}}</li>
-    </ul>
-  </div>
 </div>

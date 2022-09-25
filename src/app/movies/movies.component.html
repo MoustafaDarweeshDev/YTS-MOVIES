@@ -10,8 +10,8 @@
     </nav>
   </div>
 
-  <div *ngFor="let movie of trendingMovies | search:term " class="col-md-2">
-    <a [routerLink]="['/moviedetails' , movie.id]" class="movie">
+  <div *ngFor="let movie of trendingMovies | search:term:'title' " class="col-md-2">
+    <a [routerLink]="['/moviedetails' , movie.id]" class="movie cart">
       <img [src]="imgPrefix+movie.poster_path" alt="">
       <h3 class="h5 pt-1">{{movie.title}}</h3>
       <p class="text-muted">{{ movie.overview | seemore }}</p>
