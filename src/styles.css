@@ -3,6 +3,11 @@
   background-color: #1D1D1D;
   color: white;
 }
+.btn:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
 p{
   margin: 0;
 }
@@ -37,3 +42,27 @@ p{
 .pointer a{
   color: black;
 }
+.form-btn , .form-btn:disabled{
+  margin: 10px 0;
+  background-color: green;
+  transition: all  0.3s;
+
+}
+.form-btn:hover{
+  background-color: rgba(0, 128, 0, 0.342) !important;
+  color: white;
+}
+.form-btn:hover span , i{
+  background-color: transparent !important;
+
+}
+.form-btn span , i{
+  background-color: rgba(0, 128, 0, 0.342) !important;
+  background-color: transparent !important;
+}
+
+input,input:focus,input:visited,input:focus-within,input:focus-visible,input:hover textarea {
+  background-color: #333333 !important;
+  color: white !important;
+}
+
